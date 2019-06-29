@@ -1,0 +1,17 @@
+0.	To run the simulator, run the start.bat file in the Simple MAS folder.
+	- the .bat file contains the following commands:
+	javac -cp lib/*; -d classes TwitterGatherDataFollowers/userRyersonU/*.java
+	java -Xms256m -Xmx10240m -XX:-UseGCOverheadLimit -cp lib/*;classes jade.Boot -jade_domain_df_maxresult 1500 -jade_core_messaging_MessageManager_poolsize 10 -jade_core_messaging_MessageManager_maxqueuesize 2000000000 -jade_core_messaging_MessageManager_deliverytimethreshold 10000 -jade_domain_df_autocleanup true -local-port 35240 controller:TwitterGatherDataFollowers.userRyersonU.ControllerAgent	
+	- for UNIX based systems, you can run the same commands but modifications are required to run
+	- the maximum java heap memory -Xmx may need to be adjusted to your machine's memory capacity
+1.	Click on performance measure button.
+2.	Go to File and select Dataset From Text
+3.	Select a dataset file.
+4.	Whenever you select a dataset, you must first click 1. Get Users
+5.	After getting the users, you can change the algorithm in the middle to whichever algorithm you like that are implemented and the number of nodes to the desired number. 
+6.	After changing those parameters, you should click 2. Initialize
+7.	When it is done initializing, you can click 3. Run Simulation
+8.	Wait for the results, it may take a while depending on the size of the dataset.
+9.	When it is done, you can see results in the top-right.
+10.	To run another simulation, you can change the parameter for number of nodes and/or algorithm then YOU MUST INITIALIZE again before you run another simulation.
+11.	Repeat as necessary until you get enough results.
